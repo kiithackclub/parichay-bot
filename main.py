@@ -40,7 +40,7 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith('hi'):
+    if message.content.lower().startswith('hi'):
         await message.channel.send('Hello!')
 
 client.run(os.getenv('DISCORD_BOT_TOKEN'))
