@@ -33,6 +33,7 @@ async def on_member_join(member):
     color = [0xa633d6,0x338eda,0x33d6a6,0xff8c37,0x5bc0de]
     embedVar = discord.Embed(title="Welcome Message", description=f'{member.mention} wants to be introduced as:\n"{notes}"', color=random.choice(color))
     embedVar.set_thumbnail(url=member.avatar_url)
+    embedVar.set_footer(text='Check the pinned message in <#798945447267926038> for the detailed map of the server!')
     await channel.send(embed=embedVar)
 
 @client.event
